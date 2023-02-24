@@ -1,0 +1,146 @@
+syntax = "proto3";
+
+package com.xi.demo.grpc;
+
+option java_multiple_files = true;
+option java_package = "com.xi.demo.grpc.lib";
+option java_outer_classname = "DemoProto";
+
+// The demo service definition.
+service DemoGrpcService {
+
+  // Create a hospital.
+  rpc CreateHospital(CreateHospitalReq) returns (CreateHospitalResp){}
+
+  // Update the hospital.
+  rpc UpdateHospital(UpdateHospitalReq) returns (UpdateHospitalResp){}
+
+  // Delete the hospital.
+  rpc DeleteHospital(DeleteHospitalReq) returns (DeleteHospitalResp){}
+
+  // Get the hospital with all registered patients.
+  rpc GetHospital(GetHospitalReq) returns (GetHospitalResp){}
+
+  // Create a patient.
+  rpc CreatePatient(CreatePatientReq) returns (CreatePatientResp){}
+
+  // Update the patient.
+  rpc UpdatePatient(UpdatePatientReq) returns (UpdatePatientResp){}
+
+  // Delete the patient.
+  rpc DeletePatient(DeletePatientReq) returns (DeletePatientResp){}
+
+  // Get the patient with all hospitals registered.
+  rpc GetPatient(GetPatientReq) returns (GetPatientResp){}
+
+  // Register the patient in the hospital.
+  rpc RegisterPatient(RegisterPatientReq) returns (RegisterPatientResp){}
+
+  // Unregister the patient from the hospital.
+  rpc UnregisterPatient(UnregisterPatientReq) returns (UnregisterPatientResp){}
+}
+
+// The hospital message definition.
+message HospitalType{
+  int64 id = 1;
+  string name = 2;
+  string phone = 3;
+  string email = 4;
+  string address = 5;
+}
+// The patient message definition.
+message PatientType{
+  int64 id = 1;
+  string healthInsuranceNumber = 2;
+  string name = 3;
+  string phone = 4;
+  string email = 5;
+  string address = 6;
+}
+
+message CreateHospitalReq {
+  string name = 1;
+  string phone = 2;
+  string email = 3;
+  string address = 4;
+}
+message CreateHospitalResp {
+  int64 statusCode = 1;
+  optional HospitalType hospital = 2;
+}
+
+message UpdateHospitalReq {
+  HospitalType hospital = 1;
+}
+message UpdateHospitalResp {
+  int64 statusCode = 1;
+  optional HospitalType hospital = 2;
+}
+
+message DeleteHospitalReq {
+  int64 id = 1;
+}
+message DeleteHospitalResp {
+  int64 statusCode = 1;
+}
+
+message CreatePatientReq {
+  string name = 1;
+  string healthInsuranceNumber = 2;
+  string phone = 3;
+  string email = 4;
+  string address = 5;
+}
+message CreatePatientResp {
+  int64 statusCode = 1;
+  optional PatientType patient = 2;
+}
+
+message UpdatePatientReq {
+  PatientType patient = 1;
+}
+message UpdatePatientResp {
+  int64 statusCode = 1;
+  optional PatientType patient = 2;
+}
+
+message DeletePatientReq {
+  int64 id = 1;
+}
+message DeletePatientResp {
+  int64 statusCode = 1;
+}
+
+message GetHospitalReq {
+  int64 id = 1;
+}
+message GetHospitalResp {
+  int64 statusCode = 1;
+  optional HospitalType hospital = 2;
+  repeated PatientType patients = 3;
+}
+
+message GetPatientReq {
+  int64 id = 1;
+}
+message GetPatientResp {
+  int64 statusCode = 1;
+  optional PatientType patient = 2;
+  repeated HospitalType hospitals = 3;
+}
+
+message RegisterPatientReq{
+  int64 patientId = 1;
+  int64 hospitalId = 2;
+}
+message RegisterPatientResp{
+  int64 statusCode = 1;
+}
+
+message UnregisterPatientReq{
+  int64 patientId = 1;
+  int64 hospitalId = 2;
+}
+message UnregisterPatientResp{
+  int64 statusCode = 1;
+}

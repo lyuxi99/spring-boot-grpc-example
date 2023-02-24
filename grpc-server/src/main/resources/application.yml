@@ -1,0 +1,30 @@
+spring:
+  application:
+    name: local-grpc-server
+  jpa:
+    show-sql: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    driverClassName: org.h2.Driver
+    url: jdbc:h2:mem:test
+    username: demo
+    password: Tfs5dC4Y6CYpLok5aSO2YY0w
+#    schema: classpath:db/schema.sql
+#    data: classpath:db/data.sql
+    platform: h2
+  h2:
+    console:
+      settings:
+        web-allow-others: true
+      # we can access h2 web console at this url
+      path: /h2
+      # enable h2 web consloe
+      enabled: true
+grpc:
+  server:
+    # grpc server port
+    port: 9090
+server:
+  # h2 web console port
+  port: 8090
