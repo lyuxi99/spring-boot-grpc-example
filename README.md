@@ -8,7 +8,6 @@ This is a sample Java / Gradle / Spring Boot application running a gRPC server w
 .
 ├─grpc-lib                          # Contains the raw protobuf files and generates the java model and service classes.
 │  ├─build
-│  ├─gradle
 │  └─src
 │      ├─generated                  # Contains the generated gRPC service definition and protobuf types.
 │      └─main
