@@ -1,19 +1,14 @@
 package com.xi.grpcserver.controller;
 
 import com.xi.demo.grpc.lib.*;
-
 import com.xi.grpclib.StatusCode;
 import com.xi.grpcserver.entity.Hospital;
 import com.xi.grpcserver.entity.Patient;
-import com.xi.grpcserver.repository.HospitalRepository;
-import com.xi.grpcserver.repository.PatientRepository;
 import com.xi.grpcserver.service.DemoService;
 import io.grpc.stub.StreamObserver;
-
 import net.devh.boot.grpc.server.service.GrpcService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.transaction.annotation.Transactional;
 

@@ -22,7 +22,7 @@ import static org.junit.jupiter.api.Assertions.*;
         "grpc.client.inProcess.address=in-process:test" // Configure the client to connect to the inProcess server
 })
 @ActiveProfiles("testing")
-@SpringJUnitConfig(classes = {MyServiceIntegrationTestConfiguration.class})
+@SpringJUnitConfig(classes = {DemoGrpcServiceTestConfiguration.class})
 @DirtiesContext // Ensures that the grpc-server is properly shutdown after each test
 @EnableAutoConfiguration
 @TestMethodOrder(MethodOrderer.MethodName.class)

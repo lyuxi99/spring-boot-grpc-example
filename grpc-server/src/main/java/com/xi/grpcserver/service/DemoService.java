@@ -2,11 +2,8 @@ package com.xi.grpcserver.service;
 
 import com.xi.demo.grpc.lib.HospitalType;
 import com.xi.demo.grpc.lib.PatientType;
-import com.xi.grpclib.StatusCode;
 import com.xi.grpcserver.entity.Hospital;
 import com.xi.grpcserver.entity.Patient;
-import io.vavr.Tuple2;
-import org.springframework.stereotype.Service;
 
 import java.util.Optional;
 
@@ -20,7 +17,7 @@ public interface DemoService {
      * @param hospital hospital entity without id
      * @return created hospital with generated id
      */
-    public Hospital createHospital(Hospital hospital);
+    Hospital createHospital(Hospital hospital);
 
     /**
      * Update the hospital.
@@ -28,14 +25,14 @@ public interface DemoService {
      * @param hospitalUpdate the new hospital entity
      * @return updated hospital
      */
-    public Optional<Hospital> updateHospital(HospitalType hospitalUpdate);
+    Optional<Hospital> updateHospital(HospitalType hospitalUpdate);
 
     /**
      * Delete the hospital.
      *
      * @param id the hospital id to delete
      */
-    public void deleteHospital(long id);
+    void deleteHospital(long id);
 
     /**
      * Get the hospital with all registered patients.
@@ -43,7 +40,7 @@ public interface DemoService {
      * @param id the hospital id
      * @return the hospital entity
      */
-    public Optional<Hospital> getHospital(long id);
+    Optional<Hospital> getHospital(long id);
 
     /**
      * Create a patient.
@@ -51,7 +48,7 @@ public interface DemoService {
      * @param patient patient entity without id
      * @return created patient with generated id
      */
-    public Patient createPatient(Patient patient);
+    Patient createPatient(Patient patient);
 
     /**
      * Update the patient.
@@ -59,14 +56,14 @@ public interface DemoService {
      * @param patientUpdate the new patient entity
      * @return updated patient
      */
-    public Optional<Patient> updatePatient(PatientType patientUpdate);
+    Optional<Patient> updatePatient(PatientType patientUpdate);
 
     /**
      * Delete the patient.
      *
      * @param id the patient id to delete
      */
-    public void deletePatient(long id);
+    void deletePatient(long id);
 
     /**
      * Get the patient with all registered hospitals.
@@ -74,7 +71,7 @@ public interface DemoService {
      * @param id the patient id
      * @return the patient entity
      */
-    public Optional<Patient> getPatient(long id);
+    Optional<Patient> getPatient(long id);
 
     /**
      * Register the patient in the hospital.
@@ -83,7 +80,7 @@ public interface DemoService {
      * @param hospitalId the hospital id
      * @return whether success or not
      */
-    public boolean registerPatient(long patientId, long hospitalId);
+    boolean registerPatient(long patientId, long hospitalId);
 
     /**
      * Unregister the patient in the hospital.
@@ -92,5 +89,5 @@ public interface DemoService {
      * @param hospitalId the hospital id
      * @return whether success or not
      */
-    public boolean unregisterPatient(long patientId, long hospitalId);
+    boolean unregisterPatient(long patientId, long hospitalId);
 }

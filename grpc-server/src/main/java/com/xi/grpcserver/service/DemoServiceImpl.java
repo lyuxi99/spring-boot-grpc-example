@@ -2,14 +2,10 @@ package com.xi.grpcserver.service;
 
 import com.xi.demo.grpc.lib.HospitalType;
 import com.xi.demo.grpc.lib.PatientType;
-import com.xi.grpclib.StatusCode;
 import com.xi.grpcserver.entity.Hospital;
 import com.xi.grpcserver.entity.Patient;
 import com.xi.grpcserver.repository.HospitalRepository;
 import com.xi.grpcserver.repository.PatientRepository;
-import io.vavr.Tuple2;
-import lombok.AllArgsConstructor;
-import org.checkerframework.checker.units.qual.A;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
