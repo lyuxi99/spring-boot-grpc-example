@@ -47,6 +47,7 @@ message HospitalType{
   string phone = 3;
   string email = 4;
   string address = 5;
+  int64 beds = 6;
 }
 // The patient message definition.
 message PatientType{
@@ -56,6 +57,7 @@ message PatientType{
   string phone = 4;
   string email = 5;
   string address = 6;
+  string diagnosis = 7;
 }
 
 message CreateHospitalReq {
@@ -63,6 +65,7 @@ message CreateHospitalReq {
   string phone = 2;
   string email = 3;
   string address = 4;
+  int64 beds = 5;
 }
 message CreateHospitalResp {
   int64 statusCode = 1;
@@ -90,6 +93,7 @@ message CreatePatientReq {
   string phone = 3;
   string email = 4;
   string address = 5;
+  string diagnosis = 6;
 }
 message CreatePatientResp {
   int64 statusCode = 1;

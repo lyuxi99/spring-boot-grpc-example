@@ -23,19 +23,36 @@ import java.util.Set;
 @NoArgsConstructor
 public class Hospital implements Serializable {
     /**
-     * id
+     * Hospital ID
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    /**
+     * Hospital name
+     */
     private String name;
 
+    /**
+     * Address
+     */
     private String address;
 
+    /**
+     * Phone number
+     */
     private String phone;
 
+    /**
+     * Email address
+     */
     private String email;
+
+    /**
+     * Hospital beds
+     */
+    private long beds;
 
     @JsonIgnore
     @ManyToMany
@@ -44,13 +61,8 @@ public class Hospital implements Serializable {
     private Set<Patient> patients;
 
     public HospitalType toGrpcType() {
-        return HospitalType.newBuilder().setId(id).setName(name).setEmail(email).setPhone(phone).setAddress(address).build();
-    }
-
-    public static Hospital fromGrpcType(HospitalType hospitalMsg) {
-        Hospital hospital = new Hospital();
-        BeanUtils.copyProperties(hospitalMsg, hospital);
-        return hospital;
+        return HospitalType.newBuilder().setId(id).setName(name).setEmail(email).setPhone(phone)
+                .setAddress(address).setBeds(beds).build();
     }
 
     public static Hospital fromGrpcType(CreateHospitalReq createHospitalReq) {

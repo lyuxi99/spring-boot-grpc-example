@@ -133,75 +133,76 @@ public final class DemoProto {
       descriptor;
   static {
     java.lang.String[] descriptorData = {
-      "\n\ndemo.proto\022\020com.xi.demo.grpc\"W\n\014Hospit" +
+      "\n\ndemo.proto\022\020com.xi.demo.grpc\"e\n\014Hospit" +
       "alType\022\n\n\002id\030\001 \001(\003\022\014\n\004name\030\002 \001(\t\022\r\n\005phon" +
-      "e\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\"" +
-      "u\n\013PatientType\022\n\n\002id\030\001 \001(\003\022\035\n\025healthInsu" +
-      "ranceNumber\030\002 \001(\t\022\014\n\004name\030\003 \001(\t\022\r\n\005phone" +
-      "\030\004 \001(\t\022\r\n\005email\030\005 \001(\t\022\017\n\007address\030\006 \001(\t\"P" +
-      "\n\021CreateHospitalReq\022\014\n\004name\030\001 \001(\t\022\r\n\005pho" +
-      "ne\030\002 \001(\t\022\r\n\005email\030\003 \001(\t\022\017\n\007address\030\004 \001(\t" +
-      "\"l\n\022CreateHospitalResp\022\022\n\nstatusCode\030\001 \001" +
-      "(\003\0225\n\010hospital\030\002 \001(\0132\036.com.xi.demo.grpc." +
-      "HospitalTypeH\000\210\001\001B\013\n\t_hospital\"E\n\021Update" +
-      "HospitalReq\0220\n\010hospital\030\001 \001(\0132\036.com.xi.d" +
-      "emo.grpc.HospitalType\"l\n\022UpdateHospitalR" +
-      "esp\022\022\n\nstatusCode\030\001 \001(\003\0225\n\010hospital\030\002 \001(" +
-      "\0132\036.com.xi.demo.grpc.HospitalTypeH\000\210\001\001B\013" +
-      "\n\t_hospital\"\037\n\021DeleteHospitalReq\022\n\n\002id\030\001" +
-      " \001(\003\"(\n\022DeleteHospitalResp\022\022\n\nstatusCode" +
-      "\030\001 \001(\003\"n\n\020CreatePatientReq\022\014\n\004name\030\001 \001(\t" +
-      "\022\035\n\025healthInsuranceNumber\030\002 \001(\t\022\r\n\005phone" +
-      "\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\"h" +
-      "\n\021CreatePatientResp\022\022\n\nstatusCode\030\001 \001(\003\022" +
-      "3\n\007patient\030\002 \001(\0132\035.com.xi.demo.grpc.Pati" +
-      "entTypeH\000\210\001\001B\n\n\010_patient\"B\n\020UpdatePatien" +
-      "tReq\022.\n\007patient\030\001 \001(\0132\035.com.xi.demo.grpc" +
-      ".PatientType\"h\n\021UpdatePatientResp\022\022\n\nsta" +
-      "tusCode\030\001 \001(\003\0223\n\007patient\030\002 \001(\0132\035.com.xi." +
-      "demo.grpc.PatientTypeH\000\210\001\001B\n\n\010_patient\"\036" +
-      "\n\020DeletePatientReq\022\n\n\002id\030\001 \001(\003\"\'\n\021Delete" +
-      "PatientResp\022\022\n\nstatusCode\030\001 \001(\003\"\034\n\016GetHo" +
-      "spitalReq\022\n\n\002id\030\001 \001(\003\"\232\001\n\017GetHospitalRes" +
-      "p\022\022\n\nstatusCode\030\001 \001(\003\0225\n\010hospital\030\002 \001(\0132" +
-      "\036.com.xi.demo.grpc.HospitalTypeH\000\210\001\001\022/\n\010" +
-      "patients\030\003 \003(\0132\035.com.xi.demo.grpc.Patien" +
-      "tTypeB\013\n\t_hospital\"\033\n\rGetPatientReq\022\n\n\002i" +
-      "d\030\001 \001(\003\"\230\001\n\016GetPatientResp\022\022\n\nstatusCode" +
-      "\030\001 \001(\003\0223\n\007patient\030\002 \001(\0132\035.com.xi.demo.gr" +
-      "pc.PatientTypeH\000\210\001\001\0221\n\thospitals\030\003 \003(\0132\036" +
-      ".com.xi.demo.grpc.HospitalTypeB\n\n\010_patie" +
-      "nt\";\n\022RegisterPatientReq\022\021\n\tpatientId\030\001 " +
-      "\001(\003\022\022\n\nhospitalId\030\002 \001(\003\")\n\023RegisterPatie" +
-      "ntResp\022\022\n\nstatusCode\030\001 \001(\003\"=\n\024Unregister" +
-      "PatientReq\022\021\n\tpatientId\030\001 \001(\003\022\022\n\nhospita" +
-      "lId\030\002 \001(\003\"+\n\025UnregisterPatientResp\022\022\n\nst" +
-      "atusCode\030\001 \001(\0032\265\007\n\017DemoGrpcService\022]\n\016Cr" +
-      "eateHospital\022#.com.xi.demo.grpc.CreateHo" +
-      "spitalReq\032$.com.xi.demo.grpc.CreateHospi" +
-      "talResp\"\000\022]\n\016UpdateHospital\022#.com.xi.dem" +
-      "o.grpc.UpdateHospitalReq\032$.com.xi.demo.g" +
-      "rpc.UpdateHospitalResp\"\000\022]\n\016DeleteHospit" +
-      "al\022#.com.xi.demo.grpc.DeleteHospitalReq\032" +
-      "$.com.xi.demo.grpc.DeleteHospitalResp\"\000\022" +
-      "T\n\013GetHospital\022 .com.xi.demo.grpc.GetHos" +
-      "pitalReq\032!.com.xi.demo.grpc.GetHospitalR" +
-      "esp\"\000\022Z\n\rCreatePatient\022\".com.xi.demo.grp" +
-      "c.CreatePatientReq\032#.com.xi.demo.grpc.Cr" +
-      "eatePatientResp\"\000\022Z\n\rUpdatePatient\022\".com" +
-      ".xi.demo.grpc.UpdatePatientReq\032#.com.xi." +
-      "demo.grpc.UpdatePatientResp\"\000\022Z\n\rDeleteP" +
-      "atient\022\".com.xi.demo.grpc.DeletePatientR" +
-      "eq\032#.com.xi.demo.grpc.DeletePatientResp\"" +
-      "\000\022Q\n\nGetPatient\022\037.com.xi.demo.grpc.GetPa" +
-      "tientReq\032 .com.xi.demo.grpc.GetPatientRe" +
-      "sp\"\000\022`\n\017RegisterPatient\022$.com.xi.demo.gr" +
-      "pc.RegisterPatientReq\032%.com.xi.demo.grpc" +
-      ".RegisterPatientResp\"\000\022f\n\021UnregisterPati" +
-      "ent\022&.com.xi.demo.grpc.UnregisterPatient" +
-      "Req\032\'.com.xi.demo.grpc.UnregisterPatient" +
-      "Resp\"\000B#\n\024com.xi.demo.grpc.libB\tDemoProt" +
-      "oP\001b\006proto3"
+      "e\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\017\n\007address\030\005 \001(\t\022" +
+      "\014\n\004beds\030\006 \001(\003\"\210\001\n\013PatientType\022\n\n\002id\030\001 \001(" +
+      "\003\022\035\n\025healthInsuranceNumber\030\002 \001(\t\022\014\n\004name" +
+      "\030\003 \001(\t\022\r\n\005phone\030\004 \001(\t\022\r\n\005email\030\005 \001(\t\022\017\n\007" +
+      "address\030\006 \001(\t\022\021\n\tdiagnosis\030\007 \001(\t\"^\n\021Crea" +
+      "teHospitalReq\022\014\n\004name\030\001 \001(\t\022\r\n\005phone\030\002 \001" +
+      "(\t\022\r\n\005email\030\003 \001(\t\022\017\n\007address\030\004 \001(\t\022\014\n\004be" +
+      "ds\030\005 \001(\003\"l\n\022CreateHospitalResp\022\022\n\nstatus" +
+      "Code\030\001 \001(\003\0225\n\010hospital\030\002 \001(\0132\036.com.xi.de" +
+      "mo.grpc.HospitalTypeH\000\210\001\001B\013\n\t_hospital\"E" +
+      "\n\021UpdateHospitalReq\0220\n\010hospital\030\001 \001(\0132\036." +
+      "com.xi.demo.grpc.HospitalType\"l\n\022UpdateH" +
+      "ospitalResp\022\022\n\nstatusCode\030\001 \001(\003\0225\n\010hospi" +
+      "tal\030\002 \001(\0132\036.com.xi.demo.grpc.HospitalTyp" +
+      "eH\000\210\001\001B\013\n\t_hospital\"\037\n\021DeleteHospitalReq" +
+      "\022\n\n\002id\030\001 \001(\003\"(\n\022DeleteHospitalResp\022\022\n\nst" +
+      "atusCode\030\001 \001(\003\"\201\001\n\020CreatePatientReq\022\014\n\004n" +
+      "ame\030\001 \001(\t\022\035\n\025healthInsuranceNumber\030\002 \001(\t" +
+      "\022\r\n\005phone\030\003 \001(\t\022\r\n\005email\030\004 \001(\t\022\017\n\007addres" +
+      "s\030\005 \001(\t\022\021\n\tdiagnosis\030\006 \001(\t\"h\n\021CreatePati" +
+      "entResp\022\022\n\nstatusCode\030\001 \001(\003\0223\n\007patient\030\002" +
+      " \001(\0132\035.com.xi.demo.grpc.PatientTypeH\000\210\001\001" +
+      "B\n\n\010_patient\"B\n\020UpdatePatientReq\022.\n\007pati" +
+      "ent\030\001 \001(\0132\035.com.xi.demo.grpc.PatientType" +
+      "\"h\n\021UpdatePatientResp\022\022\n\nstatusCode\030\001 \001(" +
+      "\003\0223\n\007patient\030\002 \001(\0132\035.com.xi.demo.grpc.Pa" +
+      "tientTypeH\000\210\001\001B\n\n\010_patient\"\036\n\020DeletePati" +
+      "entReq\022\n\n\002id\030\001 \001(\003\"\'\n\021DeletePatientResp\022" +
+      "\022\n\nstatusCode\030\001 \001(\003\"\034\n\016GetHospitalReq\022\n\n" +
+      "\002id\030\001 \001(\003\"\232\001\n\017GetHospitalResp\022\022\n\nstatusC" +
+      "ode\030\001 \001(\003\0225\n\010hospital\030\002 \001(\0132\036.com.xi.dem" +
+      "o.grpc.HospitalTypeH\000\210\001\001\022/\n\010patients\030\003 \003" +
+      "(\0132\035.com.xi.demo.grpc.PatientTypeB\013\n\t_ho" +
+      "spital\"\033\n\rGetPatientReq\022\n\n\002id\030\001 \001(\003\"\230\001\n\016" +
+      "GetPatientResp\022\022\n\nstatusCode\030\001 \001(\003\0223\n\007pa" +
+      "tient\030\002 \001(\0132\035.com.xi.demo.grpc.PatientTy" +
+      "peH\000\210\001\001\0221\n\thospitals\030\003 \003(\0132\036.com.xi.demo" +
+      ".grpc.HospitalTypeB\n\n\010_patient\";\n\022Regist" +
+      "erPatientReq\022\021\n\tpatientId\030\001 \001(\003\022\022\n\nhospi" +
+      "talId\030\002 \001(\003\")\n\023RegisterPatientResp\022\022\n\nst" +
+      "atusCode\030\001 \001(\003\"=\n\024UnregisterPatientReq\022\021" +
+      "\n\tpatientId\030\001 \001(\003\022\022\n\nhospitalId\030\002 \001(\003\"+\n" +
+      "\025UnregisterPatientResp\022\022\n\nstatusCode\030\001 \001" +
+      "(\0032\265\007\n\017DemoGrpcService\022]\n\016CreateHospital" +
+      "\022#.com.xi.demo.grpc.CreateHospitalReq\032$." +
+      "com.xi.demo.grpc.CreateHospitalResp\"\000\022]\n" +
+      "\016UpdateHospital\022#.com.xi.demo.grpc.Updat" +
+      "eHospitalReq\032$.com.xi.demo.grpc.UpdateHo" +
+      "spitalResp\"\000\022]\n\016DeleteHospital\022#.com.xi." +
+      "demo.grpc.DeleteHospitalReq\032$.com.xi.dem" +
+      "o.grpc.DeleteHospitalResp\"\000\022T\n\013GetHospit" +
+      "al\022 .com.xi.demo.grpc.GetHospitalReq\032!.c" +
+      "om.xi.demo.grpc.GetHospitalResp\"\000\022Z\n\rCre" +
+      "atePatient\022\".com.xi.demo.grpc.CreatePati" +
+      "entReq\032#.com.xi.demo.grpc.CreatePatientR" +
+      "esp\"\000\022Z\n\rUpdatePatient\022\".com.xi.demo.grp" +
+      "c.UpdatePatientReq\032#.com.xi.demo.grpc.Up" +
+      "datePatientResp\"\000\022Z\n\rDeletePatient\022\".com" +
+      ".xi.demo.grpc.DeletePatientReq\032#.com.xi." +
+      "demo.grpc.DeletePatientResp\"\000\022Q\n\nGetPati" +
+      "ent\022\037.com.xi.demo.grpc.GetPatientReq\032 .c" +
+      "om.xi.demo.grpc.GetPatientResp\"\000\022`\n\017Regi" +
+      "sterPatient\022$.com.xi.demo.grpc.RegisterP" +
+      "atientReq\032%.com.xi.demo.grpc.RegisterPat" +
+      "ientResp\"\000\022f\n\021UnregisterPatient\022&.com.xi" +
+      ".demo.grpc.UnregisterPatientReq\032\'.com.xi" +
+      ".demo.grpc.UnregisterPatientResp\"\000B#\n\024co" +
+      "m.xi.demo.grpc.libB\tDemoProtoP\001b\006proto3"
     };
     descriptor = com.google.protobuf.Descriptors.FileDescriptor
       .internalBuildGeneratedFileFrom(descriptorData,
@@ -212,19 +213,19 @@ public final class DemoProto {
     internal_static_com_xi_demo_grpc_HospitalType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_xi_demo_grpc_HospitalType_descriptor,
-        new java.lang.String[] { "Id", "Name", "Phone", "Email", "Address", });
+        new java.lang.String[] { "Id", "Name", "Phone", "Email", "Address", "Beds", });
     internal_static_com_xi_demo_grpc_PatientType_descriptor =
       getDescriptor().getMessageTypes().get(1);
     internal_static_com_xi_demo_grpc_PatientType_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_xi_demo_grpc_PatientType_descriptor,
-        new java.lang.String[] { "Id", "HealthInsuranceNumber", "Name", "Phone", "Email", "Address", });
+        new java.lang.String[] { "Id", "HealthInsuranceNumber", "Name", "Phone", "Email", "Address", "Diagnosis", });
     internal_static_com_xi_demo_grpc_CreateHospitalReq_descriptor =
       getDescriptor().getMessageTypes().get(2);
     internal_static_com_xi_demo_grpc_CreateHospitalReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_xi_demo_grpc_CreateHospitalReq_descriptor,
-        new java.lang.String[] { "Name", "Phone", "Email", "Address", });
+        new java.lang.String[] { "Name", "Phone", "Email", "Address", "Beds", });
     internal_static_com_xi_demo_grpc_CreateHospitalResp_descriptor =
       getDescriptor().getMessageTypes().get(3);
     internal_static_com_xi_demo_grpc_CreateHospitalResp_fieldAccessorTable = new
@@ -260,7 +261,7 @@ public final class DemoProto {
     internal_static_com_xi_demo_grpc_CreatePatientReq_fieldAccessorTable = new
       com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
         internal_static_com_xi_demo_grpc_CreatePatientReq_descriptor,
-        new java.lang.String[] { "Name", "HealthInsuranceNumber", "Phone", "Email", "Address", });
+        new java.lang.String[] { "Name", "HealthInsuranceNumber", "Phone", "Email", "Address", "Diagnosis", });
     internal_static_com_xi_demo_grpc_CreatePatientResp_descriptor =
       getDescriptor().getMessageTypes().get(9);
     internal_static_com_xi_demo_grpc_CreatePatientResp_fieldAccessorTable = new

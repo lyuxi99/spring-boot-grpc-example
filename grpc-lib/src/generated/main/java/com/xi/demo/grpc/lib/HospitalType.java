@@ -218,6 +218,17 @@ private static final long serialVersionUID = 0L;
     }
   }
 
+  public static final int BEDS_FIELD_NUMBER = 6;
+  private long beds_ = 0L;
+  /**
+   * <code>int64 beds = 6;</code>
+   * @return The beds.
+   */
+  @java.lang.Override
+  public long getBeds() {
+    return beds_;
+  }
+
   private byte memoizedIsInitialized = -1;
   @java.lang.Override
   public final boolean isInitialized() {
@@ -247,6 +258,9 @@ private static final long serialVersionUID = 0L;
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       com.google.protobuf.GeneratedMessageV3.writeString(output, 5, address_);
     }
+    if (beds_ != 0L) {
+      output.writeInt64(6, beds_);
+    }
     getUnknownFields().writeTo(output);
   }
 
@@ -271,6 +285,10 @@ private static final long serialVersionUID = 0L;
     }
     if (!com.google.protobuf.GeneratedMessageV3.isStringEmpty(address_)) {
       size += com.google.protobuf.GeneratedMessageV3.computeStringSize(5, address_);
+    }
+    if (beds_ != 0L) {
+      size += com.google.protobuf.CodedOutputStream
+        .computeInt64Size(6, beds_);
     }
     size += getUnknownFields().getSerializedSize();
     memoizedSize = size;
@@ -297,6 +315,8 @@ private static final long serialVersionUID = 0L;
         .equals(other.getEmail())) return false;
     if (!getAddress()
         .equals(other.getAddress())) return false;
+    if (getBeds()
+        != other.getBeds()) return false;
     if (!getUnknownFields().equals(other.getUnknownFields())) return false;
     return true;
   }
@@ -319,6 +339,9 @@ private static final long serialVersionUID = 0L;
     hash = (53 * hash) + getEmail().hashCode();
     hash = (37 * hash) + ADDRESS_FIELD_NUMBER;
     hash = (53 * hash) + getAddress().hashCode();
+    hash = (37 * hash) + BEDS_FIELD_NUMBER;
+    hash = (53 * hash) + com.google.protobuf.Internal.hashLong(
+        getBeds());
     hash = (29 * hash) + getUnknownFields().hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -457,6 +480,7 @@ private static final long serialVersionUID = 0L;
       phone_ = "";
       email_ = "";
       address_ = "";
+      beds_ = 0L;
       return this;
     }
 
@@ -504,6 +528,9 @@ private static final long serialVersionUID = 0L;
       }
       if (((from_bitField0_ & 0x00000010) != 0)) {
         result.address_ = address_;
+      }
+      if (((from_bitField0_ & 0x00000020) != 0)) {
+        result.beds_ = beds_;
       }
     }
 
@@ -574,6 +601,9 @@ private static final long serialVersionUID = 0L;
         bitField0_ |= 0x00000010;
         onChanged();
       }
+      if (other.getBeds() != 0L) {
+        setBeds(other.getBeds());
+      }
       this.mergeUnknownFields(other.getUnknownFields());
       onChanged();
       return this;
@@ -625,6 +655,11 @@ private static final long serialVersionUID = 0L;
               bitField0_ |= 0x00000010;
               break;
             } // case 42
+            case 48: {
+              beds_ = input.readInt64();
+              bitField0_ |= 0x00000020;
+              break;
+            } // case 48
             default: {
               if (!super.parseUnknownField(input, extensionRegistry, tag)) {
                 done = true; // was an endgroup tag
@@ -958,6 +993,38 @@ private static final long serialVersionUID = 0L;
       checkByteStringIsUtf8(value);
       address_ = value;
       bitField0_ |= 0x00000010;
+      onChanged();
+      return this;
+    }
+
+    private long beds_ ;
+    /**
+     * <code>int64 beds = 6;</code>
+     * @return The beds.
+     */
+    @java.lang.Override
+    public long getBeds() {
+      return beds_;
+    }
+    /**
+     * <code>int64 beds = 6;</code>
+     * @param value The beds to set.
+     * @return This builder for chaining.
+     */
+    public Builder setBeds(long value) {
+      
+      beds_ = value;
+      bitField0_ |= 0x00000020;
+      onChanged();
+      return this;
+    }
+    /**
+     * <code>int64 beds = 6;</code>
+     * @return This builder for chaining.
+     */
+    public Builder clearBeds() {
+      bitField0_ = (bitField0_ & ~0x00000020);
+      beds_ = 0L;
       onChanged();
       return this;
     }

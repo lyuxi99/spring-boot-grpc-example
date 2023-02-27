@@ -60,4 +60,10 @@ public interface HospitalTypeOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAddressBytes();
+
+  /**
+   * <code>int64 beds = 6;</code>
+   * @return The beds.
+   */
+  long getBeds();
 }

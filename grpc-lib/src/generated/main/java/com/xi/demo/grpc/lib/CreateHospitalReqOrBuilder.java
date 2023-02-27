@@ -54,4 +54,10 @@ public interface CreateHospitalReqOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAddressBytes();
+
+  /**
+   * <code>int64 beds = 5;</code>
+   * @return The beds.
+   */
+  long getBeds();
 }

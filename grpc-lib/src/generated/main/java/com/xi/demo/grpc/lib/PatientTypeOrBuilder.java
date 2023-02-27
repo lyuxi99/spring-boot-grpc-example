@@ -72,4 +72,16 @@ public interface PatientTypeOrBuilder extends
    */
   com.google.protobuf.ByteString
       getAddressBytes();
+
+  /**
+   * <code>string diagnosis = 7;</code>
+   * @return The diagnosis.
+   */
+  java.lang.String getDiagnosis();
+  /**
+   * <code>string diagnosis = 7;</code>
+   * @return The bytes for diagnosis.
+   */
+  com.google.protobuf.ByteString
+      getDiagnosisBytes();
 }

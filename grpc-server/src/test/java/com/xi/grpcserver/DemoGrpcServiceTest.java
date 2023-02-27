@@ -42,10 +42,12 @@ public class DemoGrpcServiceTest {
                 CreateHospitalReq.newBuilder()
                         .setName("A Hospital").setPhone("+49 01111111111")
                         .setEmail("a.hospital@example.com").setAddress("43686 Lotheville Plaza")
+                        .setBeds(200)
                         .build(),
                 CreateHospitalReq.newBuilder()
                         .setName("B Hospital").setPhone("+49 01111111112")
                         .setEmail("b.hospital@example.com").setAddress("54 Cordelia Road")
+                        .setBeds(300)
                         .build(),
         }
         ) {
@@ -73,11 +75,11 @@ public class DemoGrpcServiceTest {
         for (CreatePatientReq request : new CreatePatientReq[]{
                 CreatePatientReq.newBuilder()
                         .setName("Alice").setPhone("+49 02221111111").setHealthInsuranceNumber("Y111111111")
-                        .setEmail("alice@example.com").setAddress("4458 Corry Road")
+                        .setEmail("alice@example.com").setAddress("4458 Corry Road").setDiagnosis("Lumbago")
                         .build(),
                 CreatePatientReq.newBuilder()
                         .setName("Bob").setPhone("+49 02221111112").setHealthInsuranceNumber("Y222222222")
-                        .setEmail("bob@example.com").setAddress("33 Ryan Plaza")
+                        .setEmail("bob@example.com").setAddress("33 Ryan Plaza").setDiagnosis("Pain in limb")
                         .build(),
         }
         ) {
@@ -105,7 +107,7 @@ public class DemoGrpcServiceTest {
     public void test3UpdateHospital() {
         UpdateHospitalReq request = UpdateHospitalReq.newBuilder().setHospital(
                 HospitalType.newBuilder().setId(1).setName("A Hospital").setPhone("+49 01111110001")
-                        .setEmail("a.hospital@example111.com").setAddress("1111 Lotheville Plaza")
+                        .setEmail("a.hospital@example111.com").setAddress("1111 Lotheville Plaza").setBeds(220)
                         .build()
         ).build();
         // Update the hospital.
@@ -131,7 +133,7 @@ public class DemoGrpcServiceTest {
     public void test4UpdateHospitalNotExists() {
         UpdateHospitalReq request = UpdateHospitalReq.newBuilder().setHospital(
                 HospitalType.newBuilder().setId(999).setName("A Hospital").setPhone("+49 01111110001")
-                        .setEmail("a.hospital@example111.com").setAddress("1111 Lotheville Plaza")
+                        .setEmail("a.hospital@example111.com").setAddress("1111 Lotheville Plaza").setBeds(220)
                         .build()
         ).build();
         UpdateHospitalResp response = grpcService.updateHospital(request);

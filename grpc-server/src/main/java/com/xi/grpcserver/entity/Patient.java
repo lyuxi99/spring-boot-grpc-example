@@ -23,21 +23,41 @@ import java.util.Set;
 @NoArgsConstructor
 public class Patient implements Serializable {
     /**
-     * id
+     * Patient ID
      */
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
+    /**
+     * Patient name
+     */
     private String name;
 
+    /**
+     * Health Insurance Number
+     */
     private String healthInsuranceNumber;
 
+    /**
+     * Phone number
+     */
     private String phone;
 
+    /**
+     * Email address
+     */
     private String email;
 
+    /**
+     * Address
+     */
     private String address;
+
+    /**
+     * Diagnosis
+     */
+    private String diagnosis;
 
     @JsonIgnore
     @ManyToMany(mappedBy = "patients")
@@ -46,13 +66,7 @@ public class Patient implements Serializable {
 
     public PatientType toGrpcType() {
         return PatientType.newBuilder().setId(id).setName(name).setHealthInsuranceNumber(healthInsuranceNumber)
-                .setEmail(email).setPhone(phone).setAddress(address).build();
-    }
-
-    public static Patient fromGrpcType(PatientType patientMsg) {
-        Patient patient = new Patient();
-        BeanUtils.copyProperties(patientMsg, patient);
-        return patient;
+                .setEmail(email).setPhone(phone).setAddress(address).setDiagnosis(diagnosis).build();
     }
 
     public static Patient fromGrpcType(CreatePatientReq createPatientReq) {
